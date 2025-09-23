@@ -17,7 +17,7 @@ body{
 }
 
 section{
-    margin-top: 10em;
+    margin-top: 13em;
     display: flex;
     justify-content: center;
 }
@@ -28,6 +28,7 @@ section{
     max-width: 350px;
     margin: 2em;
     background-color: var(--color)  ;
+    box-shadow: 5px 5px black;
 }
 
 button{
