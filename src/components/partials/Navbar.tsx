@@ -1,11 +1,11 @@
-import React from 'react'
+import { Link } from "react-router-dom";
 import { FaBlog } from "react-icons/fa";
 import { FaRegBell } from "react-icons/fa";
 const Navbar = () => {
   return (
     <nav>
       <div className="logo">
-        <FaBlog size={13} />
+        <FaBlog size={33} />
       </div>
       <ul>
         <li>
@@ -18,11 +18,13 @@ const Navbar = () => {
           <a href="">Services</a>
         </li>
       </ul>
-      <div>
-        <img src="" alt="" />
-        <FaRegBell />
+      <div className='nav-right-container'>
+        <div>
+         <img src="" alt="profile" />
+        </div>
+        <FaRegBell size={20} />
         <li>
-          <a href="">Contact</a>
+          <Link to='../../pages/auth/Login.tsx'>Login</Link>
         </li>
       </div>
     </nav>

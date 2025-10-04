@@ -1,4 +1,4 @@
-import React from 'react'
+'use Client'
 
 const FilterBtns = () => {
   return (

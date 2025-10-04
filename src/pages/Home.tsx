@@ -1,46 +1,48 @@
-import NewsLetterForm from "../components/UI/NewsLetterForm"; ""
+import NewsLetterForm from "../components/UI/NewsLetterForm";
 
 const Home = () => {
   return (
     <>
-      <section className="hero-section">
-        <h1>Articles</h1>
-        <div className="hero-container">
-          <div>
-            <img src="" alt="" />
-          </div>
-          <h1>Artificiak Inteligence Beyond Imagination</h1>
-          <p></p>
-        </div>
-      </section>
-
-      <section className="blog-section">
-        <div className="blogs-container"></div>
-      </section>
-
-      <div className="more-blogs">
-        <span>1</span>
-        <span>2</span>
-        <span>3</span>
-        <span>4</span>
-        <span>5</span>
-        <span>6</span>
-      </div>
-
-      <section className='subscribe-section'>
-        <div className="subscribe-container">
-          <div>
-            <h1>Subscribe For New Content</h1>
+      <main>
+        <section className="hero-section">
+          <h1>Articles</h1>
+          <div className="hero-container">
+            <div>
+              <img src="" alt="" />
+            </div>
+            <h1>Artificial Inteligence Beyond Imagination</h1>
             <p></p>
           </div>
-          <div>
-            <p>Email</p>
-            <NewsLetterForm/>
-          </div>
+        </section>
+
+        <section className="blog-section">
+          <div className="blogs-container"></div>
+        </section>
+
+        <div className="more-blogs-select-container">
+          <div>1</div>
+          <div>2</div>
+          <div>3</div>
+          <div>4</div>
+          <div>5</div>
+          <div>6</div>
         </div>
-      </section>
+
+        <section className="subscribe-section">
+          <div className="subscribe-container">
+            <div>
+              <h1>Subscribe For New Content</h1>
+              <p></p>
+            </div>
+            <div>
+              <p>Email</p>
+              <NewsLetterForm />
+            </div>
+          </div>
+        </section>
+      </main>
     </>
   );
-}
+};
 
-export default Home
+export default Home;

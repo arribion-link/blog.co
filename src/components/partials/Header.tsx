@@ -7,9 +7,9 @@ const Header = () => {
   return (
       <header>
           <Navbar />
-          <div className="header-details">
-            <div>
-                <div>
+          <div className="header-details-container">
+            <div className="header-content">
+                <div className="header-text">
                     <h1>Discover Awesome Articles Here</h1>
                     <p>
                     All the articles and contents are updated

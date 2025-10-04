@@ -6,14 +6,29 @@ const Footer = () => {
         <li>
           <a href="">Home</a>
         </li>
+        <li>
+          <a href="">Blog</a>
+        </li>
+        <li>
+          <a href="">Services</a>
+        </li>
+        <li>
+          <a href="">About</a>
+        </li>
+        <li>
+          <a href="">Contact</a>
+        </li>
       </ul>
 
       <div className="logo">
-        <FaBlog />
+        <FaBlog  size={25}/>
       </div>
 
-      <div>
-        <p> &copy; <span>2025</span>.All Rights Reserved</p>
+      <div className="footer-copyright-container">
+        <p>
+          {" "}
+          &copy; <span>2025</span>.All Rights Reserved
+        </p>
       </div>
     </footer>
   );
