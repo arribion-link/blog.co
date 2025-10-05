@@ -1,5 +1,5 @@
 import NewsLetterForm from "../components/UI/NewsLetterForm";
-
+import BlogCard from "../components/UI/BlogCard";
 const Home = () => {
   return (
     <>
@@ -16,7 +16,10 @@ const Home = () => {
         </section>
 
         <section className="blog-section">
-          <div className="blogs-container"></div>
+          <div className="flex gap-8">
+            <BlogCard />
+            <BlogCard />
+          </div>
         </section>
 
         <div className="more-blogs-select-container">
