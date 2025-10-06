@@ -15,8 +15,10 @@ const Home = () => {
           </div>
         </section>
 
-        <section className="blog-section">
+        {/* LANDING PAGE BLOGS  */}
+        <section className="blog-section ">
           <div className="flex gap-8">
+            <BlogCard />
             <BlogCard />
             <BlogCard />
           </div>
