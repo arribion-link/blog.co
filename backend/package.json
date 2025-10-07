@@ -26,6 +26,7 @@
     "react-router-dom": "^7.9.3"
   },
   "devDependencies": {
+    "crypto": "^1.0.1",
     "nodemon": "^3.1.10"
   }
 }

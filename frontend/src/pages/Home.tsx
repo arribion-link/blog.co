@@ -1,8 +1,10 @@
 import NewsLetterForm from "../components/UI/NewsLetterForm";
 import BlogCard from "../components/UI/BlogCard";
+import Header from "../components/partials/Header";
 const Home = () => {
   return (
     <>
+      <Header/>
       <main>
         <section className="hero-section">
           <h1>Articles</h1>

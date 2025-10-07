@@ -1,4 +1,4 @@
-import Navbar from "./Navbar"
+// import Navbar from "./Navbar"
 import Search from "../UI/Search";
 import FilterBtns from "../UI/FilterBtns";
 import { BsTwitterX } from "react-icons/bs";
@@ -6,7 +6,7 @@ import { FaYoutube } from "react-icons/fa";
 const Header = () => {
   return (
       <header>
-          <Navbar />
+          {/* <Navbar /> */}
           <div className="header-details-container">
             <div className="header-content">
                 <div className="header-text">

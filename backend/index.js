@@ -11,6 +11,9 @@ if (!port) {
 
 const app = express();
 
+// ROUTES
+import authRoutes from "./src/routes/auth.Route.js";
+
 // middleware
 app.use(bodyParser.json());
 app.use(express.json());
@@ -19,6 +22,8 @@ app.use(cors());
 app.get('/', (req, res) => {
     res.send("hello")
 });
+
+app.use('/auth', authRoutes);
 
 const init_app = async () => {
     try {      

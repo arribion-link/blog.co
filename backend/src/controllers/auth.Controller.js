@@ -8,46 +8,71 @@ import jwt from "jsonwebtoken";
 import { json } from "body-parser";
 import authmodel from "../models/auth.Model.js";
 
-export const registerUser = async (req, res) => {
-  /* This code snippet is extracting the `username`, `email`, and `password` properties from the
-  `req.body` object using object destructuring. It then checks if any of these values are falsy
-  (empty, null, or undefined). If any of these fields are missing, it returns a JSON response
-  indicating that all fields are required. This is a basic validation step to ensure that the
-  required user registration fields are provided before proceeding with the registration process. */
+export const register_user = async (req, res) => {
     const { username, email, password } = req.body;
-    if (!username || !email || !password) {
-        return res.json({
+    try {
+        if (!username || !email || !password) {
+            return res.json({
+                success: false,
+                message: "All fields are required"
+            })
+        }
+    
+        const userExist = await authmodel.findOne();
+        if (userExist) {
+            return json({
+                success: false,
+                message: "User already exist use login"
+            })
+        }
+    
+        const salt = bcrypt.genSalt(10);
+        const hashedPassword = bcrypt.hash(password, salt);
+    
+        const newUser = {
+            username,
+            email,
+            password: hashedPassword
+        }
+    
+        const User = authmodel(newUser);
+        await User.save();
+    
+        // generating a jsonwebtoken
+        
+    } catch (error) {
+        res.status(500).json({
             success: false,
-            message: "All fields are required"
-        })
+            message: "Error occured registering the user!!!"
+        });
     }
-
-    const userExist = await authmodel.findOne();
-    if (userExist) {
-        return json({
-            success: false,
-            message: "User already exist use login"
-        })
-    }
-
-    const salt = bcrypt.genSalt(10);
-    const hashedPassword = bcrypt.hash(password, salt);
-
-    const newUser = {
-        username,
-        email,
-        password: hashedPassword
-    }
-
-    const User = authmodel(newUser);
-    await User.save();
-
-    // generating a jsonwebtoken
 
 }
 
-export const loginUser = async (req, res) => {
+export const login_user = async (req, res) => {
+    const { email, password } = req.body;
     try {
+        if (!email || !password) {
+            return res.status(400).json({
+                success: false,
+                message: "all fields are required"
+            })
+        }
+
+        const chechUser = authmodel.findOne(email);
+        if (!chechUser) {
+            return res.status(404).json({
+                success: false,
+                message: "user not found"
+            });
+        }
+
+        const passwordMatch  = await bcrypt.compare(password, authmodel.password);
+        if (!passwordMatch) {
+            res.status().json({
+                
+            })
+        }
         
     } catch (error) {
         
@@ -55,6 +80,6 @@ export const loginUser = async (req, res) => {
 }
 
 export default {
-    registerUser,
-    loginUser
+    register_user,
+    login_user
 }
