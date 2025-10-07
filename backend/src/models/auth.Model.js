@@ -8,13 +8,14 @@ const authSchema = mongoose.Schema({
     },
     email: {
         required: true,
-        type: String
+        type: String,
+        unique: true
     },
     password: {
         required: true,
         String: true
     }
-});
+},{timeStamp: true});
 
 const authModel = mongoose.model("blogCoCollection", authSchema);
 

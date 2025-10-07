@@ -8,7 +8,14 @@ if (!MONGO_URL) {
 }
 
 export const connectDB = async () => {
-    mongoose.connect();
+    try {
+        await mongoose.connect(MONGO_URL, {
+            useUnifiedTopology: true
+        });
+        console.log('Database connected successfully...')
+    } catch (error) {
+        console.log('error connecting to a databse');
+    }
 }
 
 export default connectDB;

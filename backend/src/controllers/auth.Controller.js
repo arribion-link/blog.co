@@ -1,7 +1,12 @@
+// USER AUTH DATA
+// username
+// userEmail
+// userPassword
+
 import { json } from "body-parser";
 import authmodel from "../models/auth.Model.js";
 
-const registerUser = async (req, res) => {
+export const registerUser = async (req, res) => {
     const { username, email, password } = req.body;
     if (!username || !email || !password) {
         return res.json({
@@ -19,10 +24,28 @@ const registerUser = async (req, res) => {
     }
 
     const salt = bcrypt.genSalt(10);
-    const hashedPassword = bcrypt.hash(salt);
-    
+    const hashedPassword = bcrypt.hash(password, salt);
+
+    const newUser = {
+        username,
+        email,
+        password: hashedPassword
+    }
+
+    const User = authmodel.newUser()
+    User.save()
+
 }
 
-const loginUser = async (req, res) => {
-    
+export const loginUser = async (req, res) => {
+    try {
+        
+    } catch (error) {
+        
+    }
+}
+
+export default {
+    registerUser,
+    loginUser
 }

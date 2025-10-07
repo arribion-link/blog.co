@@ -3,30 +3,32 @@ import cors from "cors";
 import bodyParser from "body-parser";
 import dotenv from "dotenv";
 dotenv.config();
-import connectDB from "./config/db";
+import connectDB from "./config/db.js";
 const port = process.env.PORT;
 if (!port) {
     process.exit(1);
 }
+
+const app = express();
 
 // middleware
 app.use(bodyParser.json());
 app.use(express.json());
 app.use(cors());
 
-
-const app = express();
-
 app.get('/', (req, res) => {
     res.send("hello")
 });
 
-
 const init_app = async () => {
-    await connectDB()
-    app.listen(port, () => {
-        console.log(`http:127.0.0.1:${port}`);
-    })
+    try {      
+        await connectDB()
+        app.listen(port, () => {
+            console.log(`http:127.0.0.1:${port}`);
+        })
+    } catch (error) {
+        console.log('error initializing the app')
+    }
 }
 
 init_app()
