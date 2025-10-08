@@ -14,6 +14,10 @@ const blogSchema = async () => {
             required: true,
             type: String
         },
+        blog_content: {
+            type: String,
+            required: true
+        }
     }, { timestamp: true });
 }
 
