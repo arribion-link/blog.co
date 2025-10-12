@@ -51,13 +51,45 @@ nav ul{
   display: flex;
   align-items: start;
   justify-content: space-between;
+  margin: 2em 1em;
 }
 
 .header-text{
   display: inline;
   justify-content: start;
+  text-align: start;
 }
 
+.header-text h1{
+  font-size: 1.6em;
+}
+
+.header-text h2{
+  font-size: 1.3em;
+}
+
+.header-social-icons{
+  display: flex;
+  gap: 1em;
+}
+
+.twitter-icon{
+  color: white;
+  transition: color 1s;
+}
+
+.twitter-icon:hover{
+  color: dodgerblue;
+}
+
+.youtube-icon{
+  color: white;
+  transition: color 1s;
+}
+
+.youtube-icon:hover{
+  color: red;
+}
 /* BLOG SECTION */
 
 .blog-section{

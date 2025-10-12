@@ -1,6 +1,6 @@
 import NewsLetterForm from "../components/UI/NewsLetterForm";
 import BlogCard from "../components/UI/BlogCard";
-import Header from "../components/partials/Header";
+import Header from "../components/UI/Header";
 const Home = () => {
   return (
     <>
@@ -18,8 +18,8 @@ const Home = () => {
         </section>
 
         {/* LANDING PAGE BLOGS  */}
-        <section className="blog-section ">
-          <div className="flex gap-8">
+        <section className="p-5 bg-gray-950 mx-8">
+          <div className="flex flex-wrap gap-8">
             <BlogCard />
             <BlogCard />
             <BlogCard />

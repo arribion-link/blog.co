@@ -14,17 +14,17 @@ const BlogCard = () => {
         <h2>What is Virtual reality and what is it important.</h2>
         <p></p>
         <hr />
-        <div>
-          <div>
+        <div className="flex justify-between p-2">
+          <div className="flex items-center gap-4">
             <SlCalender />
-            <span></span>
+            <span>34th/05/2025</span>
           </div>
-          <div>
+          <div className="flex items-center gap-4">
             <FiEye />
-            <span></span>
+            <span>2k</span>
           </div>
         </div>
-        <button>Read More</button>
+        <button className="w-full">Read More</button>
       </div>
     </div>
   );

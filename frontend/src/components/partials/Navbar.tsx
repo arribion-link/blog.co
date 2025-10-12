@@ -1,21 +1,24 @@
 import { Link } from "react-router-dom";
 import { FaBlog } from "react-icons/fa";
 import { FaRegBell } from "react-icons/fa";
+
 const Navbar = () => {
   return (
     <nav>
       <div className="logo">
-        <FaBlog size={33} />
+        <Link to="/">
+           <FaBlog size={33} />
+        </Link>
       </div>
       <ul>
         <li>
-          <a href="">Home</a>
+          <Link to="/">Home</Link>
         </li>
         <li>
-          <a href="">Blogs</a>
+          <Link to="/blogs">Blogs</Link>
         </li>
         <li>
-          <a href="">Services</a>
+          <Link to="/services">Services</Link>
         </li>
       </ul>
       <div className='nav-right-container'>

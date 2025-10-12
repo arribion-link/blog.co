@@ -36,7 +36,7 @@ export const create_Blog = async (req, res) => {
 }
 
 // READ ALL BLOG
-export const get_AllB_logs =  (req, res) => {
+export const get_All_Blogs =  (req, res) => {
     try {
         const blogPost = blogModel.find();
         if (!blogPost) {
