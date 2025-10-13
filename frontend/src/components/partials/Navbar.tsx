@@ -22,8 +22,8 @@ const Navbar = () => {
         </li>
       </ul>
       <div className='nav-right-container'>
-        <div>
-         <img src="" alt="profile" />
+        <div className="profile-pic-container">
+         <img src="" alt="" className="profile-picture" />
         </div>
         <FaRegBell size={20} />
         <li>

@@ -4,7 +4,7 @@ import Header from "../components/UI/Header";
 const Home = () => {
   return (
     <>
-      <Header/>
+      <Header />
       <main>
         <section className="hero-section">
           <h1>Articles</h1>
@@ -18,8 +18,11 @@ const Home = () => {
         </section>
 
         {/* LANDING PAGE BLOGS  */}
-        <section className="p-5 bg-gray-950 mx-8">
-          <div className="flex flex-wrap gap-8">
+        <section className="blog-section p-5 bg-gray-950 mx-8">
+          <div className="blog-card-container">
+            <BlogCard />
+            <BlogCard />
+            <BlogCard />
             <BlogCard />
             <BlogCard />
             <BlogCard />
@@ -37,12 +40,14 @@ const Home = () => {
 
         <section className="subscribe-section">
           <div className="subscribe-container">
-            <div>
-              <h1>Subscribe For New Content</h1>
-              <p></p>
+            <div className="text-start">
+              <h1 className="font-bold text-4xl">Subscribe For New Content</h1>
+              <p>
+                By becomming a member of Blog.co you get access to all our
+                premium contents.
+              </p>
             </div>
             <div>
-              <p>Email</p>
               <NewsLetterForm />
             </div>
           </div>
