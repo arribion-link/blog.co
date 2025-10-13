@@ -105,9 +105,16 @@ export const update_Specific_Blog = async (req, res) => {
 export const delete_Specific_Blog = async (req, res) => {
     const delete_ID = req.params.id;
     try {
-        
+        const deletedBlog = await blogModel.findByIdAndDelete(delete_ID);
+        if (deletedBlog) {
+            return res.status(404).json({
+                msg: "error deleting the blog"
+            });
+        }
     } catch (error) {
-        
+        return res.status(500).json({
+            msg: "erro deleting the blog post"
+        });
     }
 }
 
