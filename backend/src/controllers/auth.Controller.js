@@ -39,6 +39,11 @@ export const register_user = async (req, res) => {
         await User.save();
     
         // generating a jsonwebtoken
+        const jwt_token = jwt.sign(password, process.env.JWT_SECRET, { expiresIn: "1h" });
+
+        res.status(200).json({
+            jwt_token
+        });
         
     } catch (error) {
         res.status(500).json({

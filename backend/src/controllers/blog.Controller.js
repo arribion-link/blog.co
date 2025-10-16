@@ -120,7 +120,7 @@ export const delete_Specific_Blog = async (req, res) => {
 
 export default {
     create_Blog,
-    get_AllB_logs,
+    get_All_Blogs,
     get_Specific_Blog,
     update_Specific_Blog,
     delete_Specific_Blog
