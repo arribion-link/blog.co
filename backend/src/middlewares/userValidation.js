@@ -1,6 +1,6 @@
 const { body, validationResult } = require("express-validator");
 
-const validateUser = [
+const userValidator = [
   body("username")
     .trim()
     .notEmpty()
@@ -23,3 +23,5 @@ const validateUser = [
     .matches(/\d/)
     .withMessage("Password must contain a number"),
 ];
+
+export default userValidator

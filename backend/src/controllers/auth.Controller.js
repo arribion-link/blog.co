@@ -8,7 +8,7 @@ import jwt from "jsonwebtoken";
 import { json } from "body-parser";
 import authmodel from "../models/auth.Model.js";
 
-export const register_user = async (req, res) => {
+export const register_user = async (req,  res) => {
     const { username, email, password } = req.body;
     try {
         if (!username || !email || !password) {

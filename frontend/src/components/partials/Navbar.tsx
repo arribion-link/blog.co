@@ -5,7 +5,7 @@ import { FaRegBell } from "react-icons/fa";
 const Navbar = () => {
   return (
     <nav>
-      <div className="logo">
+      <div className=" logo hover:text-blue-500 ease-in-out 1s ">
         <Link to="/">
            <FaBlog size={33} />
         </Link>

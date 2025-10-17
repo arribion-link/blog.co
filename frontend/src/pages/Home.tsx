@@ -18,7 +18,7 @@ const Home = () => {
         </section>
 
         {/* LANDING PAGE BLOGS  */}
-        <section className="blog-section p-5 bg-gray-950 mx-8">
+        <section className="blog-section p-5 bg-gray-500 mx-8">
           <div className="blog-card-container">
             <BlogCard />
             <BlogCard />
