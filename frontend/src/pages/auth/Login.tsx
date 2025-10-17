@@ -1,8 +1,7 @@
-import React from 'react'
-
+import { Link } from "react-router-dom"
 const Login = () => {
   return (
-    <section>
+    <section className="login-section min-h-full">
       <div className="form-container">
         <form action="" method="post">
           <div className="form-group">
@@ -13,7 +12,9 @@ const Login = () => {
             <label htmlFor="password"></label>
             <input type="password" placeholder="Password..." />
             </div>
-            <button type='submit'>Register</button>
+          <button type='submit'>Register</button>
+          <hr />
+          Don't have an account? <Link to="/auth/register">Create</Link>
         </form>
       </div>
     </section>

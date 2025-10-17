@@ -27,7 +27,7 @@ const Navbar = () => {
         </div>
         <FaRegBell size={20} />
         <li>
-          <Link to='../../pages/auth/Login.tsx'>Login</Link>
+          <Link to='/auth/login'>Login</Link>
         </li>
       </div>
     </nav>

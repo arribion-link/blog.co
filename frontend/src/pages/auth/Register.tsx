@@ -1,8 +1,8 @@
 // import { useState } from "react";
-
+import { Link } from "react-router-dom";
 const Register = () => {
   return (
-    <section>
+    <section className="min-h-full">
       <div className="form-container">
         <form action="" method="post">
           <div className="form-group">
@@ -16,8 +16,10 @@ const Register = () => {
           <div className="form-group">
             <label htmlFor="password"></label>
             <input type="password" placeholder="Password..." />
-            </div>
-            <button type='submit'>Register</button>
+          </div>
+          <button type="submit">Register</button>
+          <hr />
+          Already  have an account. <Link to="/auth/login">Sign in</Link>
         </form>
       </div>
     </section>

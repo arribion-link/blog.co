@@ -7,6 +7,8 @@ import Admin from './pages/Admin'
 import Navbar from './components/partials/Navbar'
 import Blogs from './pages/Blogs'
 import Services from './pages/Services'
+import Login from './pages/auth/Login'
+import Register from './pages/auth/Register'
 function App() {
 
 
@@ -18,6 +20,8 @@ function App() {
         <Route path="/blogs" element={<Blogs />} />
         <Route path="/services" element={<Services />} />
         <Route path="/admin" element={<Admin />} />
+        <Route path="/auth/login" element={<Login />} />
+        <Route path="/auth/register" element={<Register />} />
       </Routes>
       <Footer />
     </>

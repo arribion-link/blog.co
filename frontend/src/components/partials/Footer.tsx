@@ -1,5 +1,9 @@
 import { FaBlog } from "react-icons/fa";
 const Footer = () => {
+  const year = new Date();
+  const jeff = {
+    color: "dodgerblue"
+  }
   return (
     <footer>
       <ul>
@@ -21,13 +25,15 @@ const Footer = () => {
       </ul>
 
       <div className="logo">
-        <FaBlog  size={25}/>
+        <FaBlog size={25} />
       </div>
 
       <div className="footer-copyright-container">
         <p>
           {" "}
-          &copy; <span>2025</span>.All Rights Reserved
+          &copy; <span>{year.getFullYear()} </span>{" "}
+          <span style={jeff}>Jeff Arribion @codnify.</span>
+          All Rights Reserved
         </p>
       </div>
     </footer>
