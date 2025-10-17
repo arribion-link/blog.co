@@ -217,6 +217,35 @@ footer ul a:hover{
   color: gainsboro;
 }
 
+/* ================================================================================ */
+/* SERVICES PAGE */
+/* ================================================================================ */
+.service-hero{
+  padding-top: 4EM;
+  max-height: 40vh;
+}
+
+.service-hero h1{
+  font-size: 2em;
+}
+
+.services-container{
+  display: grid;
+  gap: 1em;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+
+.services-container div{
+  padding: 1em;
+  border: 1px solid rgb(80, 80, 80);
+  border-radius: 10px;
+}
+
+.services-container div h2{
+  font-size: 1.6em;
+  color: dodgerblue;
+}
+
 @media(max-width:800px){
     nav ul{
       display: none;
