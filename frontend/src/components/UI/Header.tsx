@@ -1,7 +1,7 @@
 // import Navbar from "./Navbar"
 import Search from "../UI/Search";
 import FilterBtns from "../UI/FilterBtns";
-import { BsTwitterX } from "react-icons/bs";
+// import { BsTwitterX } from "react-icons/bs";
 import { FaYoutube } from "react-icons/fa";
 const Header = () => {
   return (
@@ -18,7 +18,7 @@ const Header = () => {
                     </h2>
                 </div>
                 <div className="header-social-icons items-center gap-8">
-                    <BsTwitterX size={35}className="twitter-icon" />
+                    {/* <BsTwitterX size={35}className="twitter-icon" /> */}
                     <FaYoutube size={55} className="youtube-icon"/>
                 </div>
               </div>

@@ -3,12 +3,12 @@
 const FilterBtns = () => {
   return (
     <div>
-      <button>All</button>
-      <button>Technology</button>
-      <button>Sport</button>
+      {/* <button>All</button>
+      <button>Technology</button> */}
+      {/* <button>Sport</button>
       <button>Design</button>
       <button>Programming</button>
-      <button>Enginnering</button>
+      <button>Enginnering</button> */}
       {/* <button>All</button>
       <button>All</button> */}
     </div>

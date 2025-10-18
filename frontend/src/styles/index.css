@@ -41,6 +41,50 @@ button{
 
 }
 
+a{
+  color: dodgerblue;
+}
+
 section{
   min-height: 60vh;
+}
+
+form{
+  border: 1px solid gray;
+  padding: 1em;
+  max-width: 40em;
+  min-height: 60vh;
+  border-radius: 10px;
+  color: gray;
+  background-color: #ffffff08;
+  backdrop-filter: blur(15px);
+}
+
+form button{
+  width: 100%;
+}
+
+form input{
+  padding: 5px;
+  color: white;
+  border: 1s solid rgba(0, 0, 0, 0.186);
+  width: 100%;
+  background-color: rgba(65, 65, 65, 0.441);
+  border-radius: 5px;
+}
+
+form input:focus{
+  outline: 1px solid dodgerblue;
+  color: green;
+}
+
+.form-group{
+  margin: 2em 0em;
+}
+
+.login-section{
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-image: url(https://images.unsplash.com/photo-1760533120264-0b82c7f169ea?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw3MXx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=60&w=600);
 }

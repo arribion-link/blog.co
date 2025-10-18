@@ -2,7 +2,7 @@
 import { Link } from "react-router-dom";
 const Register = () => {
   return (
-    <section className="min-h-full">
+    <section className="login-section min-h-full">
       <div className="form-container">
         <form action="" method="post">
           <div className="form-group">
@@ -19,7 +19,7 @@ const Register = () => {
           </div>
           <button type="submit">Register</button>
           <hr />
-          Already  have an account. <Link to="/auth/login">Sign in</Link>
+          Already have an account. <Link to="/auth/login">Sign in</Link>
         </form>
       </div>
     </section>

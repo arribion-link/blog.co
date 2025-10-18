@@ -33,7 +33,7 @@ const Services = () => {
                 <div>
                   <h2>{service.title}</h2>
                   <p> {service.description} </p>
-                  <p>
+                  <p className="flex p-8 bg-gray-900 rounded-2xl items-center justify-between m-4">
                     learn more <FaArrowRight />{" "}
                   </p>
                 </div>

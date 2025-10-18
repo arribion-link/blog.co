@@ -12,7 +12,7 @@ const Login = () => {
             <label htmlFor="password"></label>
             <input type="password" placeholder="Password..." />
             </div>
-          <button type='submit'>Register</button>
+          <button type='submit'>Login</button>
           <hr />
           Don't have an account? <Link to="/auth/register">Create</Link>
         </form>

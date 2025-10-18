@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+// import React, { useEffect, useState } from 'react'
 import { SpinnerDotted } from 'spinners-react';
 // import { XlviLoader } from "react-awesome-loaders";
 
@@ -9,9 +9,9 @@ const Blogs = () => {
   // const [blog, setBlog] = useState();
   // const [text, setText] = useState();
 
-  useEffect(() => {
+  // useEffect(() => {
     
-  })
+  // })
 
   return (
     <section>
