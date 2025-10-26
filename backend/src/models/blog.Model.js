@@ -1,26 +1,27 @@
-import mongoose, { mongo } from "mongoose";
+import mongoose from "mongoose";
 
-const blogSchema = async () => {
-    await mongoose.Schema({
-        imgUrl: {
-            required: true,
-            type: String
-        },
-        title: {
-            type: String,
-            required: true
-        },
-        blog_preview: {
-            required: true,
-            type: String
-        },
-        blog_content: {
-            type: String,
-            required: true
-        }
-    }, { timestamp: true });
-}
+const blogSchema = mongoose.Schema(
+  {
+    imgUrl: {
+      type: String,
+      required: true,
+    },
+    title: {
+      type: String,
+      required: true,
+    },
+    blog_preview: {
+      type: String,
+      required: true,
+    },
+    blog_content: {
+      type: String,
+      required: true,
+    },
+  },
+  { timestamps: true } // ✅ corrected key
+);
 
-export const blogModel = mongoose.model('blogCollections', blogSchema);
+export const blogModel = mongoose.model("blogCollections", blogSchema);
 
 export default blogModel;

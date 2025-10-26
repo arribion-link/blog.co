@@ -9,9 +9,7 @@ if (!MONGO_URL) {
 
 export const connectDB = async () => {
     try {
-        await mongoose.connect(MONGO_URL, {
-            useUnifiedTopology: true
-        });
+        await mongoose.connect(MONGO_URL);
         console.log('Database connected successfully...')
     } catch (error) {
         console.log('error connecting to a databse');

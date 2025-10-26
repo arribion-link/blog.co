@@ -1,4 +1,5 @@
 import express from "express";
+import Cookies  from "cookie-parser";
 import cors from "cors";
 import bodyParser from "body-parser";
 import dotenv from "dotenv";
@@ -13,11 +14,13 @@ const app = express();
 
 // ROUTES
 import authRoutes from "./src/routes/auth.Route.js";
+import { cookie } from "express-validator";
 
 // middleware
 app.use(bodyParser.json());
 app.use(express.json());
 app.use(cors());
+app.use(cookie());
 
 app.get('/', (req, res) => {
     res.send("hello")

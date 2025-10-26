@@ -5,7 +5,7 @@
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
 
-import { json } from "body-parser";
+// import { json } from "body-parser";
 import authmodel from "../models/auth.Model.js";
 
 export const register_user = async (req,  res) => {
@@ -17,7 +17,6 @@ export const register_user = async (req,  res) => {
                 message: "All fields are required"
             })
         }
-    
         const userExist = await authmodel.findOne();
         if (userExist) {
             return json({
@@ -25,9 +24,8 @@ export const register_user = async (req,  res) => {
                 message: "User already exist use login"
             })
         }
-    
-        const salt = bcrypt.genSalt(10);
-        const hashedPassword = bcrypt.hash(password, salt);
+        // const salt = bcrypt.genSalt(10);
+        const hashedPassword = bcrypt.hash(password, 10);
     
         const newUser = {
             username,
@@ -40,9 +38,9 @@ export const register_user = async (req,  res) => {
     
         // generating a jsonwebtoken
         const jwt_token = jwt.sign(password, process.env.JWT_SECRET, { expiresIn: "1h" });
-
+        res.cookie()
         res.status(200).json({
-            jwt_token
+            message: "user created successfully..."
         });
         
     } catch (error) {

@@ -1,21 +1,23 @@
 import mongoose from "mongoose";
 
-const authSchema = mongoose.Schema({
+const authSchema = mongoose.Schema(
+  {
     username: {
-        required: true,
-        type: String,
-        
+      type: String,
+      required: true,
     },
     email: {
-        required: true,
-        type: String,
-        unique: true
+      type: String,
+      required: true,
+      unique: true,
     },
     password: {
-        required: true,
-        String: true
-    }
-},{timeStamp: true});
+      type: String,
+      required: true,
+    },
+  },
+  { timestamps: true } // ✅ corrected key
+);
 
 const authModel = mongoose.model("blogCoCollection", authSchema);
 
