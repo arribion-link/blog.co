@@ -1,4 +1,5 @@
 import { FaBlog } from "react-icons/fa";
+import { Link } from "react-router-dom";
 const Footer = () => {
   const year = new Date();
   const jeff = {
@@ -8,20 +9,24 @@ const Footer = () => {
     <footer>
       <ul>
         <li>
-          <a href="">Home</a>
+          <Link to="/">Home</Link>
         </li>
         <li>
-          <a href="">Blog</a>
+          <Link to="/">Blogs</Link>
         </li>
         <li>
-          <a href="">Services</a>
+          <Link to="/">Services</Link>
         </li>
         <li>
-          <a href="">About</a>
+          <Link to="/contact">Contact</Link>
         </li>
-        <li>
-          <a href="">Contact</a>
-        </li>
+
+        {/* ABOUT IS SAME IN SERVICES */}
+        {/* <li>
+          <Link to="/">About</Link>
+        </li> */}
+
+
       </ul>
 
       <div className="logo">

@@ -15,7 +15,7 @@ const Blogs = () => {
 
   return (
     <section>
-      <h1>All Blogs page</h1>
+     
       {/* spinners-react */}
       <div className='flex justify-center'>
 
