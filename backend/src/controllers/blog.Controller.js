@@ -6,7 +6,7 @@
 // Date
 // Views
 
-import blogModel from "../models/blog.Model";
+import blogModel from "../models/blog.Model.js";
 
 
 // CREATE A BLOG
@@ -101,7 +101,7 @@ export const update_Specific_Blog = async (req, res) => {
     }
 }
 
-// DELETE BLOG
+// DELETE ONE BLOG
 export const delete_Specific_Blog = async (req, res) => {
     const delete_ID = req.params.id;
     try {
@@ -118,10 +118,31 @@ export const delete_Specific_Blog = async (req, res) => {
     }
 }
 
+// DELETE ALL BLOGS
+export const delete_all_blogs = async (req, res) => {
+    const deleteId = req.params.id;
+    try {
+        const deletePost = blogModel.findByIdAndDelete(deleteId);
+        if (!deletePost) {
+            return res.status(400).json({
+                msg: "post not found"
+            });
+        }
+        res.status(200).json({
+            msg: "blog deleted successfully"
+        });
+    } catch (error) {
+        return res.status(500).json({
+            msg: "Something went wrong while deleting the post"
+        });
+    }
+}
+
 export default {
     create_Blog,
     get_All_Blogs,
     get_Specific_Blog,
     update_Specific_Blog,
-    delete_Specific_Blog
+    delete_Specific_Blog,
+    delete_all_blogs
 }

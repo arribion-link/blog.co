@@ -8,4 +8,8 @@ authRoutes
     .post('/register', userValidator, register_user)
     .post('/login', userValidator, login_user);
 
+// ENDPOINTS
+    
+// http:localhost:
+
 export default authRoutes;

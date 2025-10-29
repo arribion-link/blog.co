@@ -2,7 +2,7 @@
 const Contact = () => {
   return (
     <section>
-      <div className="contact-header">
+      <div className="contact-header ">
         <h1>📬 Get in Touch with Blog Services</h1>
         <p>
           Contact information for top blogging platforms and providers. 🛠️ Need

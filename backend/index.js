@@ -14,6 +14,7 @@ const app = express();
 
 // ROUTES
 import authRoutes from "./src/routes/auth.Route.js";
+import blogRoutes from "./src/routes/blog.Route.js";
 import { cookie } from "express-validator";
 
 // middleware
@@ -23,10 +24,12 @@ app.use(cors());
 app.use(cookie());
 
 app.get('/', (req, res) => {
-    res.send("hello")
+    res.send("API running successfully");
 });
 
+// Route
 app.use('/auth', authRoutes);
+app.use("/api/", blogRoutes);
 
 const init_app = async () => {
     try {      
